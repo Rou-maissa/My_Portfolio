@@ -1,0 +1,541 @@
+/* ==== Global Styles ==== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fdfdfd;
+    color: #333;
+    line-height: 1.6;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1; /* pushes footer to bottom */
+}
+/* ==== Header ==== */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333;
+}
+.logo:hover {
+  box-shadow:
+    0 10px 25px rgba(0,0,0,0.1),
+    0 0 24px rgba(255, 107, 107, 0.81);     /* outer glow */
+  /* animate the gradient layer (2nd background) */
+ 
+}
+
+.navbar a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+    .navbar a:hover,
+    .navbar a.active {
+        color: #ff6b6b;
+    }
+
+/* ==== Hero Section ==== */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 120px 10%;
+    min-height: 100vh;
+    background: linear-gradient(to right, #fff, #ffeaea);
+}
+
+.hero-text h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+    .hero-text h1 span {
+        color: #ff6b6b;
+    }
+
+.hero-text p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background: #ff6b6b;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+    .btn:hover {
+        background: #ff4040;
+    }
+
+.hero-img img {
+    width: 320px;
+    border-radius: 50%;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+/* ==== Sections ==== */
+section {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+    section h2 {
+        font-size: 2rem;
+        margin-bottom: 40px;
+        color: #222;
+    }
+
+/* Section Intro */
+.section-intro {
+  font-size: 1rem;
+  color: #444;                 /* slightly darker for readability */
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+/* Section Title */
+.projects h2 {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.projects h2 span {
+  color: #ff6b6b;              /* highlight keyword */
+  font-weight: 800;
+}
+
+.projects h3 {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #666;
+  margin-bottom: 2.5rem;
+}
+
+/* Projects Section Container */
+.projects {
+  background: linear-gradient(135deg, #fffafa, #ffecec); /* soft gradient */
+  padding: 70px 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05); /* subtle depth */
+  margin: 40px auto;
+  max-width: 1200px;
+}
+
+/* Projects Cards Layout */
+.projects-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Project Card */
+/* Accent colors */
+:root{
+  --accent: #ff6b6b;
+  --accent-soft: #ffd6d6;
+}
+
+/* Project Card */
+.project-card {
+  position: relative;
+  background:
+    linear-gradient(#fff, #fff) padding-box,                  /* inner fill */
+    linear-gradient(135deg, var(--accent), var(--accent-soft), var(--accent)) border-box; /* gradient border */
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  border: 2px solid transparent;     /* lets the gradient show as border */
+  border-radius: 16px;
+
+  padding: 25px;
+  width: 300px;
+  text-align: center;
+
+  box-shadow: 0 6px 18px rgba(0,0,0,0.07);
+  transition: transform .3s ease, box-shadow .3s ease, background-position .8s ease;
+  /* for smoother anim on Safari */
+  will-change: transform, background-position;
+  backface-visibility: hidden;
+}
+
+/* Hover glow + subtle movement of the gradient */
+.project-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow:
+    0 10px 25px rgba(0,0,0,0.1),
+    0 0 24px rgba(255,107,107,0.45);     /* outer glow */
+  /* animate the gradient layer (2nd background) */
+  background-size: 100% 100%, 220% 220%;
+  background-position: 0 0, 100% 0;
+}
+
+/* Icon + text (unchanged, optional) */
+.project-card i {
+  font-size: 2.5rem;
+  color: var(--accent);
+  margin-bottom: 18px;
+  transition: color .3s ease;
+}
+.project-card:hover i { color: #e63946; }
+.project-card h3 { font-size: 1.3rem; margin-bottom: 12px; color: #222; font-weight: 600; }
+.project-card p  { font-size: .95rem; color: #555; line-height: 1.6; }
+
+
+
+/* Icon Style */
+.project-card i {
+  font-size: 2.5rem;
+  color: #ff6b6b;
+  margin-bottom: 18px;
+  transition: color 0.3s ease;
+}
+
+.project-card:hover i {
+  color: #e63946;
+}
+
+/* Card Titles & Text */
+.project-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: #222;
+  font-weight: 600;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+
+
+/* ==== Skills ==== */
+.skills {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 12px;
+  margin-top: 80px; 
+}
+
+.skills h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.skills h2 span {
+  color: #ff6b6b;
+  font-weight: bold;
+}
+
+.skills .section-intro {
+  font-size: 1rem;
+  color: #555;
+  max-width: 650px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+/* Skills Container */
+.skills-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+/* Individual Skill Cards */
+.skills-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  width: 300px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: left;
+}
+
+.skills-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px rgba(255, 107, 107, 0.7), 
+              0 0 40px rgba(255, 107, 107, 0.5), 
+              0 0 60px rgba(255, 107, 107, 0.3);
+}
+
+.skills-card h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.skills-card i {
+  color: #ff6b6b;
+  font-size: 1.5rem;
+}
+
+.skills-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-card ul li {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 8px 0;
+  position: relative;
+  padding-left: 20px;
+}
+
+.skills-card ul li::before {
+  content: "✔";
+  color: #ff6b6b;
+  position: absolute;
+  left: 0;
+  font-size: 0.9rem;
+}
+
+
+
+
+/* ==== Certificates ==== */
+.certificates-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.certificates h2 span{
+  color: #ff6b6b;
+  font-weight: bold;
+}
+
+.certificate-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    width: 200px;
+}
+.certificate-card p span{
+  color: #ff6b6b;
+  font-weight: bold;
+}
+.certificate-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.certificate-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  width: 280px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+/* Hover effect with lightning glow */
+.certificate-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px rgba(255, 107, 107, 0.7), 
+              0 0 40px rgba(255, 107, 107, 0.5), 
+              0 0 60px rgba(255, 107, 107, 0.3);
+}
+/* Experiences Section */
+.experiences {
+  padding: 80px 10%;
+  text-align: center;
+  background: #f9fafb;
+}
+
+.experiences h2 {
+  font-size: 2.5rem;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.experiences h2 span {
+  color: #ff6b6b;
+  font-weight: bold;
+}
+
+.section-intro {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  color: #555;
+  font-size: 1rem;
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1.5rem;
+}
+
+.experience-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 25px 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  position: relative;
+}
+
+.experience-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px rgba(255, 107, 107, 0.7), 
+              0 0 40px rgba(255, 107, 107, 0.5), 
+              0 0 60px rgba(255, 107, 107, 0.3);
+}
+
+.experience-card i {
+  font-size: 2rem;
+  color: rgba(255, 107, 107, 0.7);
+  margin-bottom: 10px;
+  display: block;
+}
+
+.experience-card h3 {
+  font-size: 1.2rem;
+  color: #111;
+  margin-bottom: 5px;
+}
+
+.experience-card .company {
+  display: block;
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.experience-card p {
+  color: #444;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+/* ===== Education Section ===== */
+.education-section {
+  margin-bottom: 60px;
+  text-align: left;
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.education-section h3 {
+  font-size: 1.6rem;
+  color: #ff6b6b;
+  font-weight: bold;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.education-card {
+  border-left: 4px solid rgba(255, 107, 107, 0.7);
+  padding-left: 15px;
+  margin-bottom: 20px;
+}
+
+.education-card h4 {
+  font-size: 1.2rem;
+  color: #111;
+  margin-bottom: 5px;
+}
+
+.education-card .edu-details {
+  display: block;
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.education-card p {
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* ==== Footer ==== */
+.footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 25px 10px;
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+ .footer .social-icons {
+        margin-top: 10px;
+       }
+
+.footer .social-icons a {
+            margin: 0 10px;
+            font-size: 1.5rem;
+            color: #ff6b6b;
+            transition: 0.3s;
+        }
+
+            .footer .social-icons a:hover {
+                color: #fff;
+            }
+#typing {
+  color: #ff6b6b;
+  font-weight: bold;
+}

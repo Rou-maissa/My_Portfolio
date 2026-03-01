@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" data-arp>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style1.css">
+
+  <!-- Boxicons (for icons) -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+  <!-- Typed.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+<body>
+    <!-- ===== Header ===== -->
+    <header class="header">
+        <a href="#home" class="logo">Roumaissa Tazairt</a>
+
+        <nav class="navbar">
+            <a href="index.html" class="active"><i class="bx bx-home"></i> About Me</a>
+            <a href="projects.html"><i class="bx bx-code-alt"></i> Projects</a>
+            <a href="skills.html"><i class="bx bx-brain"></i> Skills</a>
+            <a href="certificates.html"><i class="bx bx-certification"></i> Certificates</a>
+            <a href="Experiences.html"><i class="bx bx-briefcase"></i> Experiences</a>
+        </nav>
+    </header>
+
+    <!-- ===== Hero Section ===== -->
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <h1>Hello, I'm <span>Roumaissa Tazairt</span></h1>
+            <h2>I’m a <span id="typing"></span></h2>
+            <p> 1st year master student  of computer Engineering , I hold a bachlor degree in Electronics Engineering .</p>
+            <p>
+              Passionate about technology and creativity, I enjoy building projects that bring ideas to life. 
+              Always exploring new skills and challenges to grow as a developer and engineer.
+            </p>
+            <a href="projects.html" class="btn">Explore My Work</a>
+        </div>
+        <div class="hero-img">
+            <img src="about me.jpeg" alt="Roumaissa Tazairt">
+        </div>
+    </section>
+    
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+        <p>&copy; 2025 Roumaissa Tazairt | All Rights Reserved</p>
+        <div class="social-icons">
+            <a href="https://github.com/Rou-maissa"target="_blank"><i class="bx bxl-github"></i></a>
+            <a href="https://www.linkedin.com/in/roumaissa-t-b33236268/"target="_blank"><i class="bx bxl-linkedin"></i></a>
+            <a href="https://mail.google.com/mail/?view=cm&to=roumaissatazairt@gmail.com" target="_blank">
+  <i class="bx bx-envelope"></i>
+</a>
+
+        </div>
+    </footer>
+
+    <!-- Typed.js Script -->
+    <script>
+      var typed = new Typed("#typing", {
+        strings: [
+          " Developer",
+          "Curious Learner",
+          "Computer Engineering Student"
+        ],
+        typeSpeed: 60,
+        backSpeed: 40,
+        backDelay: 1500,
+        loop: true
+      });
+    </script>
+</body>
+</html>
