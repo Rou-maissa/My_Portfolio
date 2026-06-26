@@ -1,76 +1,108 @@
 <!DOCTYPE html>
-<html lang="en" data-arp>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-
-  <!-- External CSS -->
-  <link rel="stylesheet" href="style1.css">
-
-  <!-- Boxicons (for icons) -->
+  <title>Roumaissa Tazairt – Engineer & AI Developer</title>
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-
-  <!-- Typed.js -->
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="style1.css" rel="stylesheet">
 </head>
 <body>
-    <!-- ===== Header ===== -->
-    <header class="header">
-        <a href="#home" class="logo">Roumaissa Tazairt</a>
+  <header class="header">
+    <a href="index.html" class="logo">Roumaissa<span> Tazairt</span></a>
+    <nav class="navbar">
+      <a href="index.html"><i class="bx bx-home"></i> About Me</a>
+      <a href="projects.html"><i class="bx bx-code-alt"></i> Projects</a>
+      <a href="skills.html"><i class="bx bx-brain"></i> Skills</a>
+      <a href="certificates.html"><i class="bx bx-certification"></i> Certificates</a>
+      <a href="Experiences.html"><i class="bx bx-briefcase"></i> Experiences</a>
+    </nav>
+  </header>
 
-        <nav class="navbar">
-            <a href="index.html" class="active"><i class="bx bx-home"></i> About Me</a>
-            <a href="projects.html"><i class="bx bx-code-alt"></i> Projects</a>
-            <a href="skills.html"><i class="bx bx-brain"></i> Skills</a>
-            <a href="certificates.html"><i class="bx bx-certification"></i> Certificates</a>
-            <a href="Experiences.html"><i class="bx bx-briefcase"></i> Experiences</a>
-        </nav>
-    </header>
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <span class="hero-eyebrow">Welcome</span>
+        <h1>Hi, I'm <span>Roumaissa</span></h1>
+        <p class="subtitle">
+          Full-stack engineer with expertise in <span id="typing">AI & Machine Learning</span> • 
+          Passionate about hardware, software, and solving complex problems.
+        </p>
+        <div class="hero-cta">
+          <a href="projects.html" class="btn btn-primary">View My Work</a>
+          <a href="#footer" class="btn btn-outline">Get In Touch</a>
+        </div>
+      </div>
 
-    <!-- ===== Hero Section ===== -->
-    <section id="home" class="hero">
-        <div class="hero-text">
-            <h1>Hello, I'm <span>Roumaissa Tazairt</span></h1>
-            <h2>I’m a <span id="typing"></span></h2>
-            <p> 1st year master student  of computer Engineering , I hold a bachlor degree in Electronics Engineering .</p>
-            <p>
-              Passionate about technology and creativity, I enjoy building projects that bring ideas to life. 
-              Always exploring new skills and challenges to grow as a developer and engineer.
-            </p>
-            <a href="projects.html" class="btn">Explore My Work</a>
+      <div class="hero-img">
+        <div class="img-frame">
+          <img src="photo1.jpeg" alt="Roumaissa Tazairt">
+          <div class="badge">
+            <i class="bx bxs-star"></i> Available for Work
+          </div>
         </div>
-        <div class="hero-img">
-            <img src="about me.jpeg" alt="Roumaissa Tazairt">
-        </div>
+      </div>
     </section>
-    
-    <!-- ===== Footer ===== -->
-    <footer class="footer">
-        <p>&copy; 2025 Roumaissa Tazairt | All Rights Reserved</p>
-        <div class="social-icons">
-            <a href="https://github.com/Rou-maissa"target="_blank"><i class="bx bxl-github"></i></a>
-            <a href="https://www.linkedin.com/in/roumaissa-t-b33236268/"target="_blank"><i class="bx bxl-linkedin"></i></a>
-            <a href="https://mail.google.com/mail/?view=cm&to=roumaissatazairt@gmail.com" target="_blank">
-  <i class="bx bx-envelope"></i>
-</a>
 
+    <section class="about-strip">
+      <div class="about-inner">
+        <div>
+          <span class="about-label">About</span>
+          <h2 class="about-title">Engineering <span>Excellence</span></h2>
         </div>
-    </footer>
+        <div class="divider-v"></div>
+        <div class="about-body">
+          <p>
+            I'm an engineer and AI developer with a passion for building intelligent systems that solve real-world problems. 
+            My expertise spans <strong>machine learning, electronics, embedded systems, and full-stack development</strong>.
+          </p>
+          <p>
+            With hands-on experience in Python, C++, and modern AI frameworks, I've led projects combining deep learning, computer vision, and hardware integration. 
+            I'm driven by continuous learning and collaborating on impactful initiatives.
+          </p>
+        </div>
+      </div>
+    </section>
 
-    <!-- Typed.js Script -->
-    <script>
-      var typed = new Typed("#typing", {
-        strings: [
-          " Developer",
-          "Curious Learner",
-          "Computer Engineering Student"
-        ],
-        typeSpeed: 60,
-        backSpeed: 40,
-        backDelay: 1500,
-        loop: true
-      });
-    </script>
+    <section class="stats-row">
+      <div class="stat">
+        <span class="stat-num">15+</span>
+        <span class="stat-label">Projects Completed</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">8+</span>
+        <span class="stat-label">Certifications</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">3+</span>
+        <span class="stat-label">Years Experience</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">100%</span>
+        <span class="stat-label">Dedication</span>
+      </div>
+    </section>
+
+    
+  </main>
+
+  <!-- Modal for full certificate view -->
+  <div id="certificateModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage" alt="Certificate">
+    <div class="modal-caption" id="modalCaption"></div>
+  </div>
+
+  <footer id="footer" class="footer">
+    <p>&copy; 2025 Roumaissa Tazairt · All Rights Reserved</p>
+    <div class="social-icons">
+      <a href="https://github.com/Rou-maissa" target="_blank"><i class="bx bxl-github"></i></a>
+      <a href="https://www.linkedin.com/in/roumaissa-t-b33236268/" target="_blank"><i class="bx bxl-linkedin"></i></a>
+      <a href="https://mail.google.com/mail/?view=cm&to=roumaissatazairt@gmail.com" target="_blank"><i class="bx bx-envelope"></i></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
